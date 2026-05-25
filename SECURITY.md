@@ -2,11 +2,11 @@
 
 ## Scope
 
-This repository is a **reference control plane** for dispatch intake, handoff
-risk, and route-adherence posture across transportation workflows. It ships
-synthetic, non-sensitive sample data only. It is not a production system of record
-and should not be deployed with real rider, driver, shipment, or operations data
-without an independent security review.
+This repository is a **reference control plane** for dispatch reliability,
+handoff-risk triage, and route-adherence posture across logistics/operations
+workflows. It ships synthetic, non-sensitive sample data only. It is not a
+production system of record and should not be deployed with real dispatch,
+driver, or customer data without an independent security review.
 
 ## Supported versions
 
@@ -31,4 +31,4 @@ We aim to acknowledge within 3 business days.
 
 ### Known / accepted advisories
 
-_None at v0.1-shipped._
+_None at v1.0-prod._

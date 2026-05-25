@@ -10,9 +10,9 @@ One cold/warm message per repo at STATE 5, logged below.
 
 - **Company:**
 - **Contact / role:**
-- **ICP segment:** (transportation platform / logistics operator / field service control team)
-- **Trigger / hook:** (service-level misses, route exceptions, handoff delays)
-- **Angle:** (which surface — dispatch lane, handoff risks, route adherence — maps to their pain)
+- **ICP segment:** (GovTech / RegTech / regulated enterprise policy team)
+- **Trigger / hook:** (active rulemaking, comment deadline, compliance pain)
+- **Angle:** (which surface — comment lane, obligation map, approval posture — maps to their pain)
 - **Channel:** (email / LinkedIn / warm intro)
 - **KG Embedded tie-back:** (kineticgain.com/embedded)
 

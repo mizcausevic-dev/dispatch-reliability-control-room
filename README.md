@@ -1,5 +1,11 @@
 # Dispatch Reliability Control Room
 
+[![CI](https://github.com/mizcausevic-dev/dispatch-reliability-control-room/actions/workflows/ci.yml/badge.svg)](https://github.com/mizcausevic-dev/dispatch-reliability-control-room/actions/workflows/ci.yml)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](./LICENSE)
+[![Dependabot](https://img.shields.io/badge/dependabot-enabled-025E8C?logo=dependabot&logoColor=white)](./.github/dependabot.yml)
+[![Deploy](https://github.com/mizcausevic-dev/dispatch-reliability-control-room/actions/workflows/pages.yml/badge.svg)](https://github.com/mizcausevic-dev/dispatch-reliability-control-room/actions/workflows/pages.yml)
+
+
 TypeScript control room for dispatch readiness, route adherence pressure, handoff gaps, and SLA-safe intervention across mobility and transportation operations.
 
 ## Why this exists
@@ -60,6 +66,19 @@ Open:
 - `npm run demo`
 - `npm run smoke`
 - `npm run render:assets`
+
+## Production status
+
+<!-- Maintained by Claude Code (Platform/SRE lane) after v1.0-prod hardening. -->
+
+| Aspect | Status |
+|--------|--------|
+| CI | Node 20 + 22 matrix — lint · typecheck · coverage · build · demo · smoke · `npm audit` ([workflow](./.github/workflows/ci.yml)) |
+| Test coverage | 100% statements on `src/services/` (gate: ≥ 60%) |
+| License | [AGPL-3.0-or-later](./LICENSE) |
+| Dependencies | Dependabot weekly (npm + GitHub Actions); `npm audit --audit-level=high` in CI |
+| Security | [SECURITY.md](./SECURITY.md) — 0 known high/critical advisories at v1.0-prod |
+| Deploy | Static prerender → **https://dispatch.kineticgain.com/** (GitHub Pages, [pages workflow](./.github/workflows/pages.yml)) |
 
 ## Docs
 
