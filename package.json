@@ -1,0 +1,44 @@
+{
+  "name": "dispatch-reliability-control-room",
+  "version": "0.1.0",
+  "description": "TypeScript control room for dispatch readiness, route adherence pressure, handoff gaps, and SLA-safe intervention across mobility and transportation operations.",
+  "main": "dist/src/app.js",
+  "scripts": {
+    "dev": "tsx watch src/app.ts",
+    "build": "tsc --pretty false",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "typecheck": "tsc --pretty false --noEmit",
+    "demo": "tsx scripts/run_demo.ts",
+    "smoke": "tsx scripts/smoke_check.ts",
+    "prerender": "tsx scripts/prerender.ts",
+    "verify": "npm run build && npm run test && npm run demo && npm run smoke",
+    "render:assets": "powershell -ExecutionPolicy Bypass -File .\\scripts\\render_readme_assets.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mizcausevic-dev/dispatch-reliability-control-room.git"
+  },
+  "license": "AGPL-3.0-or-later",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mizcausevic-dev/dispatch-reliability-control-room/issues"
+  },
+  "homepage": "https://github.com/mizcausevic-dev/dispatch-reliability-control-room#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.7.0",
+    "@vitest/coverage-v8": "^4.1.7",
+    "eslint": "^9.39.1",
+    "globals": "^16.5.0",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.46.4",
+    "vitest": "^4.1.7"
+  }
+}
