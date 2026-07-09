@@ -1,20 +1,50 @@
+# Dependabot — monthly grouped version updates.
+# Security updates stay on Dependabot security updates' default behavior.
+# Group rules explicitly apply only to version updates.
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    open-pull-requests-limit: 10
-    labels:
-      - "dependencies"
-    commit-message:
-      prefix: "chore"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+      day: "monday"
+      time: "07:30"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 2
     labels:
       - "dependencies"
       - "github-actions"
     commit-message:
-      prefix: "chore"
+      prefix: "ci"
+      include: "scope"
+    groups:
+      github-actions-monthly:
+        applies-to: "version-updates"
+        patterns:
+          - "*"
+
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+      day: "monday"
+      time: "07:45"
+      timezone: "America/New_York"
+    open-pull-requests-limit: 2
+    labels:
+      - "dependencies"
+      - "supply-chain"
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    groups:
+      npm-production-monthly:
+        applies-to: "version-updates"
+        dependency-type: "production"
+        patterns:
+          - "*"
+      npm-development-monthly:
+        applies-to: "version-updates"
+        dependency-type: "development"
+        patterns:
+          - "*"
