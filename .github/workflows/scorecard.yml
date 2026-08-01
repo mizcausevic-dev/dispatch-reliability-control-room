@@ -32,12 +32,12 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout (full history needed by Scorecard)
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5  # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v4
         with:
           persist-credentials: false
 
       - name: Run Scorecard
-        uses: ossf/scorecard-action@4eaacf0543bb3f2c246792bd56e8cdeffafb205a  # v2
+        uses: ossf/scorecard-action@2d1146689b8cda280b9bc96326124645441f03bc  # v2
         continue-on-error: true
         with:
           results_file: results.sarif
@@ -50,7 +50,7 @@ jobs:
           publish_results: false
 
       - name: Upload SARIF (so Security tab shows findings)
-        uses: github/codeql-action/upload-sarif@03e4368ac7daa2bd82b3e85262f3bf87ee112f57  # v3
+        uses: github/codeql-action/upload-sarif@e4fba868fa4b1b91e1fdab776edc8cfbe6e9fb81  # v3
         with:
           sarif_file: results.sarif
 
